@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>VEGAS BETT – Sitio Oficial</title>
+  <meta name="description" content="Accedé a Vegas Bett. Contactanos por WhatsApp y obtené un bono del 25%." />
+
+  <meta property="og:title" content="VEGAS BETT • OFICIAL" />
+  <meta property="og:description" content="Volvé con nosotros y obtené un bono del 25%." />
+  <meta property="og:image" content="portadavegasbett.png" />
+  <meta property="og:type" content="website" />
+
+  <style>
+    :root{
+      --bg:#050507;
+      --gold: #f3c35d;          
+      --gold-strong: #d4a017;   
+      --text: #ffffff;
+      --muted: #a0a0a8;
+      --wa: #25D366;
+      --card: rgba(255, 255, 255, 0.03);
+      --border: rgba(255, 255, 255, 0.1);
+      --blur: blur(12px);
+    }
+
+    *{ box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+    
+    body {
+      margin: 0; 
+      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text); 
+      background: var(--bg);
+      display: flex; 
+      min-height: 100dvh; 
+      flex-direction: column;
+      overflow-x: hidden;
+    }
+
+    .hero {
+      position: relative; 
+      isolation: isolate; 
+      display: grid; 
+      place-items: center; 
+      min-height: 100dvh;
+      padding: 20px 0;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute; inset: 0;
+      /* CAMBIO A PNG AQUÍ */
+      background: url("portadavegasbett.png") center/cover no-repeat;
+      filter: brightness(0.4) contrast(1.1);
+      z-index: -2;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute; inset: 0;
+      background: linear-gradient(180deg, rgba(5,5,7,0.2) 0%, rgba(5,5,7,0.8) 100%);
+      z-index: -1;
+    }
+
+    .wrap { 
+      width: min(480px, 90vw); 
+      margin-inline: auto;
+      animation: fadeIn 0.8s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-copy {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .badge {
+      display: inline-flex;
+      padding: 5px 15px;
+      background: rgba(243, 195, 93, 0.15);
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      border-radius: 100px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.5rem, 8vw, 3.5rem);
+      line-height: 1;
+      font-weight: 900;
+      background: linear-gradient(to bottom, #fff, var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 5px 15px rgba(0,0,0,0.5));
+    }
+
+    .sub {
+      color: var(--muted);
+      font-size: 1.1rem;
+      margin-top: 10px;
+    }
+
+    .card {
+      background: var(--card);
+      backdrop-filter: var(--blur);
+      -webkit-backdrop-filter: var(--blur);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 24px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    }
+
+    .cta { display: flex; flex-direction: column; gap: 12px; }
+
+    .btn {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 16px;
+      border-radius: 16px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+      font-size: 1rem;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-main {
+      background: var(--gold);
+      color: #000;
+      box-shadow: 0 10px 20px rgba(243, 195, 93, 0.2);
+    }
+
+    .btn-main:hover {
+      background: #fff;
+      transform: translateY(-3px);
+      box-shadow: 0 15px 25px rgba(243, 195, 93, 0.3);
+    }
+
+    .btn-wa {
+      background: rgba(37, 211, 102, 0.1);
+      color: #25D366;
+      border: 1px solid rgba(37, 211, 102, 0.3);
+    }
+
+    .btn-wa:hover {
+      background: #25D366;
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+    .btn-alt {
+      background: rgba(255, 255, 255, 0.05);
+      color: #fff;
+      border: 1px solid var(--border);
+    }
+
+    .btn-alt:hover {
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateY(-2px);
+    }
+
+    .mini {
+      text-align: center;
+      margin-top: 1.5rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+      line-height: 1.4;
+    }
+
+    footer {
+      margin-top: auto;
+      padding: 30px;
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--muted);
+      letter-spacing: 1px;
+    }
+
+    .btn i { font-style: normal; font-size: 1.2rem; }
+  </style>
+</head>
+<body>
+
+  <main class="hero">
+    <div class="wrap">
+      
+      <div class="hero-copy">
+        <span class="badge">🔥 ¡OFICIALMENTE VOLVIMOS!</span>
+        <h1>VEGAS BETT</h1>
+        <p class="sub">Tu diversión, ahora con más beneficios.</p>
+      </div>
+
+      <section class="card">
+        <div class="cta">
+          <a class="btn btn-main" href="https://diversionasegurada.github.io/Paginaoficialvegas/">
+            <i>🎰</i> ENTRAR A VEGAS BETT
+          </a>
+
+          <div style="margin: 10px 0; height: 1px; background: var(--border);"></div>
+
+          <a class="btn btn-wa" href="https://wa.me/5492233458173?text=Hola!%20Quiero%20cargar%20en%20VegasBett" target="_blank">
+            <i>💬</i> WhatsApp Principal
+          </a>
+
+          <a class="btn btn-alt" href="https://wa.me/5492236631329?text=Hola!%20Necesito%20asistencia%20en%20VegasBett" target="_blank">
+            <i>📱</i> Número de Respaldo
+          </a>
+        </div>
+
+        <p class="mini">
+          <b>BONO DEL 25%</b> en tu regreso.<br>
+          Atención personalizada las 24hs.
+        </p>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    &copy; <span id="y"></span> VEGAS BETT · ALL RIGHTS RESERVED
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
